@@ -1,4 +1,7 @@
 node_modules
-./LICENSE
-./netlify.toml
+LICENSE
+netlify.toml
+dist
+markdown-elements
+hello-world
 
