@@ -8,25 +8,34 @@ import SkipLink from "@/components/SkipLink";
 import { siteConfig } from "@/site-config";
 
 interface Props {
-	meta: SiteMeta;
+  meta: SiteMeta;
 }
 
 const {
-	meta: { title, description = siteConfig.description, ogImage, articleDate },
+  meta: { title, description = siteConfig.description, ogImage, articleDate },
 } = Astro.props;
 ---
 
 <html lang={siteConfig.lang}>
-	<head>
-		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
-	</head>
-	<body>
-		<ThemeProvider />
-		<SkipLink />
-		<Header />
-		<main id="main" class="flex-1">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      ogImage={ogImage}
+      articleDate={articleDate}
+    />
+  </head>
+  <body>
+    <div
+      class="aspect-square h-18 w-full bg-gradient-to-r from-sky-700 to-indigo-700 p-2"
+    >
+    </div>
+    <ThemeProvider />
+    <SkipLink />
+    <Header />
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
