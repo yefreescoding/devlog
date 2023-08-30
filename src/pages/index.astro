@@ -5,7 +5,7 @@ import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
 
-import { ViewTransitions } from "astro:transitions";
+// import { ViewTransitions } from "astro:transitions";
 
 const MAX_POSTS = 10;
 const allPosts = await getCollection("post");
@@ -56,7 +56,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
           </li>
         ))
       }
-      <ViewTransitions />
+      <!-- <ViewTransitions /> -->
     </ul>
   </section>
   <section class="mt-16">
