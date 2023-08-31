@@ -1,22 +1,20 @@
 ---
-title: '¿Como centrar un div?'
-description: 'Esto ya no da gracia... Pero quiero compartir mi solución'
-publishDate: '15 August 2023'
+title: "¿Como centrar un div?"
+description: "Esto ya no da gracia... Pero quiero compartir mi solución"
+publishDate: "15 August 2023"
 # coverImage:
 #   src: './cover-image/cover.png'
 #   alt: 'Astro build wallpaper'
-tags: ['tutoriales', 'html', 'css']
+tags: ["tutoriales", "html", "css"]
 ---
 
-<h2>
-  Ok, vamos a ello. Cortita y al pie.
-</h2>
-<p>
-  Tratare de explicar como suelo centrar cualquier contener que esta dentro de otro contenedor. De una manera semántica, ordenada y sencilla. Como me enseñaron en la escuela.
-</p>
-<p>
-  Lo primer es tener nuestro documento HTML preparado para ser estilado:
-</p>
+## Ok, vamos a ello. Cortita y al pie.
+
+Tratare de explicar como suelo centrar cualquier contener que esta dentro de otro contenedor. De una manera semántica, ordenada y sencilla. Como me enseñaron en la escuela.
+
+### HTML
+
+Lo primer es tener nuestro documento HTML preparado para ser estilado:
 
 1. Para centrar cualquier elemento debe este estar dentro de un contenedor. Las clases que les he puesto a cada elemento ayudan a ilustrar un poco esta técnica.
 
@@ -34,6 +32,8 @@ tags: ['tutoriales', 'html', 'css']
 </html>
 ```
 
+### CSS
+
 2. Ahora tocaría dar los respectivos estilos a cada elemento. Tenemos dos maneras de hacerlo en caso de que los elementos estén en **posición relativa**.
 
 ```css
@@ -50,6 +50,4 @@ tags: ['tutoriales', 'html', 'css']
 
 - `place-items: center;`: Esta propiedad, que creo es exclusiva de **grid**, colocara todos los elementos dentro del contenedor en el centro del mismo.
 
-<p>
-  Con tres lineas de código ya hemos centrado nuestro elemento. ¿No ha sido tan difícil verdad? Pues eso, úsalo en tu proximo en tu proximo proyecto y no te vuelvas loco que en 2023, casi 2024 no estamos para estos trotes.
-</p>
+Con tres lineas de código ya hemos centrado nuestro elemento. ¿No ha sido tan difícil verdad? Pues eso, úsalo en tu proximo en tu proximo proyecto y no te vuelvas loco que en 2023, casi 2024 no estamos para estos trotes.
