@@ -7,6 +7,8 @@ import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import { siteConfig } from "@/site-config";
 
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   meta: SiteMeta;
 }
@@ -24,6 +26,7 @@ const {
       ogImage={ogImage}
       articleDate={articleDate}
     />
+    <ViewTransitions />
   </head>
   <body>
     <div
@@ -33,7 +36,7 @@ const {
     <ThemeProvider />
     <SkipLink />
     <Header />
-    <main id="main" class="flex-1">
+    <main id="main" class="flex-1" transition:animate="slide">
       <slot />
     </main>
     <Footer />
