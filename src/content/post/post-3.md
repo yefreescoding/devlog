@@ -29,48 +29,57 @@ Consejos para Crear un Currículum para un Desarrollador Web Junior:
 
 **Ejemplo de Currículum para Desarrollador Web Junior:**
 
-```pdf
-[Nombre Completo]
-Desarrollador Web Junior
-Correo electrónico: [tu correo electrónico]
-Teléfono: [tu número de teléfono]
-LinkedIn: [tu perfil de LinkedIn]
-GitHub: [tu perfil de GitHub]
+```md
+# [Nombre Completo]
 
-Resumen:
+## Desarrollador Web Junior
+
+- Correo electrónico: [tu correo electrónico]
+- Teléfono: [tu número de teléfono]
+- LinkedIn: [tu perfil de LinkedIn]
+- GitHub: [tu perfil de GitHub]
+
+## Resumen:
+
 Apasionado por el desarrollo web con conocimientos en HTML, CSS y JavaScript. Busco oportunidades para aprender y crecer como desarrollador, contribuyendo con proyectos creativos y funcionales.
 
-Habilidades:
+## Habilidades:
+
 - HTML5, CSS3, JavaScript
 - Uso de herramientas de control de versiones (Git)
 - Diseño responsivo y UI/UX básico
 - Trabajo en equipo y comunicación efectiva
 
-Proyectos Personales:
+## Proyectos Personales:
+
 - Sitio web de portafolio personal (enlace)
 - Aplicación web de lista de tareas con React (enlace)
 - Clon de página de inicio de Google con HTML y CSS (enlace)
 
-Educación:
+## Educación:
+
 Curso de Desarrollo Web Completo, [Plataforma de Aprendizaje], [Año]
 
-Certificaciones:
+## Certificaciones:
+
 - Certificado de Desarrollo Web, [Plataforma de Aprendizaje], [Año]
 
-Experiencia Laboral:
+## Experiencia Laboral:
+
 [Nombre de la Empresa], [Puesto (si aplica)], [Fecha]
+
 - Contribuí en el desarrollo y mantenimiento de [proyecto o tarea específica]
 
-Idiomas y Herramientas:
+## Idiomas y Herramientas:
+
 - Inglés (intermedio)
 - Photoshop (básico)
 
-Intereses:
+## Intereses:
+
 - Explorar nuevas tecnologías
 - Aprender sobre diseño de interfaces
 - Participar en hackathons y retos de programación
-
-¡Espero que estos consejos y el ejemplo te ayuden a crear un currículum impactante y atractivo! Recuerda que tu pasión por el aprendizaje y el desarrollo web es un activo valioso.
 ```
 
 ## Utiliza palabras claves
