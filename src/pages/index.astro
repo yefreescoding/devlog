@@ -35,8 +35,10 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 
 <PageLayout meta={{ title: "Home" }}>
   <section>
-    <h1 class="title mb-6 font-black md:text-3xl">¡Lo mejor esta debajo!</h1>
-    <p class="mb-4 md:text-lg">
+    <h1 class="title mb-6 text-3xl font-black md:text-5xl">
+      Lo mejor esta debajo 😉
+    </h1>
+    <p class="mb-4 text-xl md:text-2xl">
       Devlog, o blog de devs, ¿captas? Un blog sobre desarrollo de software, o
       sea, un rinconcito en la web donde puedo liberar mis pensamientos y
       experiencias. Sin las trampas de las plataformas de redes sociales y sus
@@ -45,11 +47,11 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     <SocialList />
   </section>
   <section aria-label="Blog post list" class="mt-16">
-    <h2 class="title mb-4 text-xl font-extrabold">Posts</h2>
-    <ul class="grid gap-4 md:grid-cols-2">
+    <h2 class="title mb-4 text-xl font-extrabold md:text-2xl">Posts</h2>
+    <ul class="grid gap-6 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col rounded-sm p-4 shadow-sm shadow-slate-500 transition-all hover:-translate-x-1 hover:-translate-y-1">
+          <li class="flex flex-col rounded-lg border border-gray-500 p-6 shadow-lg shadow-slate-300 transition-all hover:-translate-x-1 hover:-translate-y-1">
             <PostPreview post={p} withDesc />
           </li>
         ))
@@ -58,7 +60,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     </ul>
   </section>
   <section class="mt-16">
-    <h2 class="title mb-4 text-xl font-extrabold">Tecnologías:</h2>
+    <h2 class="title mb-4 text-xl font-extrabold md:text-2xl">Tecnologías:</h2>
     <ul class="space-y-4 sm:space-y-2">
       {
         cactusTech.map(({ href, title, desc }) => (
