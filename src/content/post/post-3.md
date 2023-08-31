@@ -7,7 +7,7 @@ tags: ["tutoriales", "trabajo", "desarrollo"]
 
 ## Simple, bonito y barato. Asi se define un buen cv.
 
-**Consejos para Crear un Currículum para un Desarrollador Web Junior:**
+Consejos para Crear un Currículum para un Desarrollador Web Junior:
 
 1. **Encabezado Atractivo:** Incluye tu nombre, título (Desarrollador Web Junior), y datos de contacto (correo electrónico, teléfono y enlace a LinkedIn o GitHub).
 
@@ -77,6 +77,6 @@ Intereses:
 
 Recuerda que muchos empresas cuando publican sus ofertas de empleo en sitios como LinkedIn o indeed, utilizan un programa que escanea todos los cv enviados para descartar los que no se adecúan a la oferta.
 
-### ¿Que es un ATS?
+## ¿Que es un ATS?
 
 ATS son las siglas de Applicant Tracking System, que traducido al español significa, sistema de seguimiento de candidatos. Es un software utilizado por empresas para almacenar currículums, acceder a ellos y realizar el seguimiento de los candidatos durante el proceso de selección. Es una base de datos de candidatos en la que el reclutador puede hacer búsquedas para encontrar candidatos adecuados al puesto que necesita cubrir.

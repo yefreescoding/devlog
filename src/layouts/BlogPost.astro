@@ -38,11 +38,11 @@ const { headings } = await post.render();
 </script>
 
 <BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
-  <div class="gap-x-10 lg:flex lg:items-start">
-    <!-- {
+  <div class="flex flex-wrap gap-8 gap-x-10 lg:items-start">
+    {
       !!headings.length && (
-        <aside class="sticky top-20 order-2 -me-32 hidden basis-1/4 lg:block">
-          <h2 class="font-semibold">Table of Contents</h2>
+        <aside class="sticky top-20  hidden grow basis-[10em] lg:block">
+          <h2 class="text-xl font-bold">Table of Contents</h2>
           <ul class="mt-4 text-xs">
             {headings.map(({ depth, slug, text }) => (
               <li class="line-clamp-2 hover:text-accent">
@@ -61,11 +61,11 @@ const { headings } = await post.render();
           </ul>
         </aside>
       )
-    } -->
+    }
     <article class="flex-grow basis-1/2 break-words" data-pagefind-body>
       <div id="blog-hero"><BlogHero content={post} /></div>
       <div
-        class="prose prose-lg prose-cactus mx-auto mt-12 min-w-full prose-headings:font-semibold prose-headings:before:absolute prose-headings:before:-ms-4 prose-headings:before:text-accent prose-headings:before:content-['#'] prose-th:before:content-none"
+        class="prose prose-lg prose-cactus mx-auto mt-12 min-w-full prose-headings:font-semibold"
       >
         <slot />
       </div>
