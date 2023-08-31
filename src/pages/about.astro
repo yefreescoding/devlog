@@ -1,10 +1,10 @@
 ---
-import PageLayout from '@/layouts/Base';
-import { Image } from 'astro:assets';
-import aboutImg from '~/assets/about-pic.jpg';
+import PageLayout from "@/layouts/Base";
+import { Image } from "astro:assets";
+import aboutImg from "../assets/about-pic.jpg";
 
 const meta = {
-  title: 'About',
+  title: "About",
   description: "I'm a starter theme for Astro.build",
 };
 ---
@@ -21,9 +21,8 @@ const meta = {
       <Image
         src={aboutImg}
         alt="A cartoon cactus looking at the 'Astro.build' logo"
-        loading="eager"
-        fetchpriority="high"
-        class={'aspect-square w-full'}
+        loading="lazy"
+        class={"aspect-square w-full"}
       />
     </div>
     <p>Sobre el creador de este blog:</p>
