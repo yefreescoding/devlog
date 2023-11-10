@@ -34,20 +34,27 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section>
-    <h1 class="title mb-6 text-3xl font-black md:text-5xl">
-      Lo mejor esta debajo 😉
-    </h1>
-    <p class="mb-4 text-xl md:text-2xl">
-      Devlog, o blog de devs, ¿captas? Un blog sobre desarrollo de software, o
-      sea, un rinconcito en la web donde puedo liberar mis pensamientos y
-      experiencias. Sin las trampas de las plataformas de redes sociales y sus
-      algoritmos.
-    </p>
-    <SocialList />
+  <section class="">
+    <div class="py-4 cover-bg">
+      <h1
+        class="p-4 title bg-bgColor mb-6 font-bold tracking-tight text-center"
+      >
+        Es hora de <span id="titles">programar</span>
+      </h1>
+      <div class="h-[10dvh]"></div>
+    </div>
+    <div class="grid grid-cols-2 bg-bgColor">
+      <p class="mb-4 text-base p-4">
+        Devlog, o blog de devs, ¿captas? Un blog sobre desarrollo de software, o
+        sea, un rinconcito en la web donde puedo liberar mis pensamientos y
+        experiencias. Sin las trampas de las plataformas de redes sociales y sus
+        algoritmos.
+      </p>
+      <SocialList />
+    </div>
   </section>
   <section aria-label="Blog post list" class="mt-16">
-    <h2 class="title mb-4 text-xl font-extrabold md:text-2xl">Posts</h2>
+    <h2 class="mb-4 text-xl font-extrabold md:text-2xl">Posts</h2>
     <ul class="grid gap-6 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
@@ -60,7 +67,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     </ul>
   </section>
   <section class="mt-16">
-    <h2 class="title mb-4 text-xl font-extrabold md:text-2xl">Tecnologías:</h2>
+    <h2 class="mb-4 text-xl font-extrabold md:text-2xl">Tecnologías:</h2>
     <ul class="space-y-4 sm:space-y-2">
       {
         cactusTech.map(({ href, title, desc }) => (
@@ -80,3 +87,70 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     </ul>
   </section>
 </PageLayout>
+
+<style>
+  .title {
+    font-size: clamp(3.5rem, 3.5vw, 5rem);
+  }
+
+  #titles {
+    opacity: 1;
+    transition: all 200ms;
+  }
+
+  #titles.fade {
+    opacity: 0;
+  }
+
+  .cover-bg {
+    background-color: var(--theme-bg);
+    opacity: 0.8;
+    background: linear-gradient(135deg, #c134f9c8 25%, transparent 25%) -10px 0/
+        20px 20px,
+      linear-gradient(225deg, var(--theme-accent) 25%, transparent 25%) -10px 0/
+        20px 20px,
+      linear-gradient(315deg, #c134f9d1 25%, transparent 25%) 0px 0/ 20px 20px,
+      linear-gradient(45deg, var(--theme-accent) 25%, var(--theme-bg) 25%) 0px 0/
+        20px 20px;
+  }
+</style>
+
+<!--
+
+<script lang="js">
+  const titleContainer = document.getElementById("titles");
+
+  // titleContainer.innerText = "test";
+
+  const titles = [
+    "Programar",
+    "Crear",
+    "Inventar",
+    "Imaginar",
+    "Desarrollar",
+    "Guiar",
+  ];
+
+  let i = 0;
+  setInterval(() => {
+    // Add the fade class to start the transition
+    titleContainer.classList.add("fade");
+
+    // After the transition ends, change the word and remove the fade class
+    setTimeout(() => {
+      // console.log(titles[i]);
+      titleContainer.innerText = titles[i];
+      titleContainer.classList.remove("fade");
+      i++;
+      if (i === titles.length) {
+        i = 0; // Reset the index to start from the beginning of the array
+      }
+    }, 500); // This should match the transition duration in your CSS
+
+    // Remove the 'show' class after the word has been visible for some time
+    setTimeout(() => {
+      titleContainer.classList.remove("show");
+    }, 2000); // Adjust this to change how long each word stays visible
+  }, 2500); // This should be the sum of the above two timeouts
+</script>
+ -->

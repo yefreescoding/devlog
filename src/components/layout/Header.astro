@@ -8,13 +8,13 @@ const url = new URL(Astro.request.url);
 
 <header
   id="main-header"
-  class="mb-28 flex w-full flex-wrap-reverse items-center justify-between py-4"
+  class="mb-12 p-2 sticky backdrop-blur-xl z-10 bg_th_color top-0 flex w-auto flex-wrap-reverse items-center justify-between py-4"
   transition:persist
 >
   <div class="flex items-center">
     <a
       href="/"
-      class="flex items-center p-4 hover:filter-none"
+      class="flex items-center hover:filter-none"
       aria-current={url.pathname === "/" ? "page" : false}
     >
       <img
@@ -29,7 +29,7 @@ const url = new URL(Astro.request.url);
         MENU_LINKS.map((link) => (
           <a
             href={link.path}
-            class="px-4 py-4 underline  transition-all hover:text-violet-600 hover:underline-offset-8 sm:py-0"
+            class="px-4 py-4  transition-all hover:text-violet-600 hover:underline-offset-8 sm:py-0"
             aria-current={url.pathname === link.path ? "page" : false}
             rel="prefetch"
           >
@@ -39,6 +39,8 @@ const url = new URL(Astro.request.url);
       }
     </nav>
   </div>
-  <Search />
-  <ThemeToggle />
+  <div class="relative flex gap-2 items-center">
+    <Search />
+    <ThemeToggle />
+  </div>
 </header>
