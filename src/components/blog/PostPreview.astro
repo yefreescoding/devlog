@@ -14,14 +14,21 @@ const datetime = date.toISOString();
 const postDate = getFormattedDate(date);
 ---
 
-<Element class="mb-4">
-  <a href={`/posts/${post.slug}/`} class="cactus-link" rel="prefetch">
-    <h3 class="mb-4 text-lg font-bold"># {post.data.title}</h3>
-    {
-      withDesc && (
-        <q class="line-clamp-3 block italic">{post.data.description}</q>
-      )
-    }
-  </a>
-</Element>
 <time datetime={datetime} class="min-w-[120px] text-gray-500">{postDate}</time>
+<Element class="flex flex-col">
+  <h3 class="mb-4 text-xl font-bold">{post.data.title}</h3>
+  {
+    withDesc && (
+      <q class="line-clamp-3 block italic my-4 text-base font-medium">
+        {post.data.description}
+      </q>
+    )
+  }
+  <a
+    href={`/posts/${post.slug}/`}
+    class="self-end border border-violet-600 p-2 rounded-lg bg-violet-400 text-white"
+    rel="prefetch"
+  >
+    Leer</a
+  >
+</Element>

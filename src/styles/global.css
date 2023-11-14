@@ -4,7 +4,7 @@
   :root {
     color-scheme: light;
     --theme-bg: #fafafa;
-    --theme-link: #567c77;
+    /* --theme-link: #567c77; */
     --theme-text: #22272a;
     --theme-accent: #cc2a42;
     --theme-accent-2: #111;
@@ -14,9 +14,9 @@
 
   :root.dark {
     color-scheme: dark;
-    --theme-bg: #16191b;
-    --theme-link: #d480aa;
-    --theme-text: #c9cacc;
+    --theme-bg: #080a0a;
+    /* --theme-link: #d480aa; */
+    --theme-text: #eff1f4;
     --theme-accent: #2bbc89;
     --theme-accent-2: #eee;
     --theme-quote: #ccffb6;

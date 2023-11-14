@@ -37,14 +37,18 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   <section class="">
     <div class="py-4 cover-bg">
       <h1
-        class="p-4 title bg-bgColor mb-6 font-bold tracking-tight text-center"
+        class="bg-bgColor flex flex-col md:flex-row gap-4 p-4 title mb-6 font-bold tracking-tight items-center justify-center"
       >
-        Es hora de <span id="titles">programar</span>
+        <span class="flex-1 text-right">Es hora de</span><span
+          id="titles"
+          class="flex-1"></span>
       </h1>
       <div class="h-[10dvh]"></div>
     </div>
-    <div class="grid grid-cols-2 bg-bgColor">
-      <p class="mb-4 text-base p-4">
+    <div
+      class="grid md:grid-cols-2 bg-bgColor border border-slate-400 border-separate divide-y md:divide-y-0 md:divide-x-[1px]"
+    >
+      <p class="mb-4 text-base p-4 font-medium">
         Devlog, o blog de devs, ¿captas? Un blog sobre desarrollo de software, o
         sea, un rinconcito en la web donde puedo liberar mis pensamientos y
         experiencias. Sin las trampas de las plataformas de redes sociales y sus
@@ -53,12 +57,17 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
       <SocialList />
     </div>
   </section>
-  <section aria-label="Blog post list" class="mt-16">
-    <h2 class="mb-4 text-xl font-extrabold md:text-2xl">Posts</h2>
-    <ul class="grid gap-6 md:grid-cols-2">
+  <section aria-label="Blog post list" class="my-24">
+    <h2
+      class="mb-4 text-xl font-bold md:text-2xl text-center border border-slate-400 p-8"
+    >
+      Todo lo que aprendo, todo lo que practico, todos mis errores, todos mis
+      codigos, toda sobre programacion en este blog.
+    </h2>
+    <ul class="grid gap-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col rounded-lg border border-gray-500 p-6 shadow-lg shadow-slate-300 transition-all hover:-translate-x-1 hover:-translate-y-1">
+          <li class="flex flex-col  border border-slate-400 p-6 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))
@@ -103,19 +112,60 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   }
 
   .cover-bg {
-    background-color: var(--theme-bg);
+    background-color: #e5e5f7;
     opacity: 0.8;
-    background: linear-gradient(135deg, #c134f9c8 25%, transparent 25%) -10px 0/
-        20px 20px,
-      linear-gradient(225deg, var(--theme-accent) 25%, transparent 25%) -10px 0/
-        20px 20px,
-      linear-gradient(315deg, #c134f9d1 25%, transparent 25%) 0px 0/ 20px 20px,
-      linear-gradient(45deg, var(--theme-accent) 25%, var(--theme-bg) 25%) 0px 0/
-        20px 20px;
+    background-image: linear-gradient(
+        30deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        150deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        30deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        150deg,
+        #444cf7 12%,
+        transparent 12.5%,
+        transparent 87%,
+        #444cf7 87.5%,
+        #444cf7
+      ),
+      linear-gradient(
+        60deg,
+        #444cf777 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #444cf777 75%,
+        #444cf777
+      ),
+      linear-gradient(
+        60deg,
+        #444cf777 25%,
+        transparent 25.5%,
+        transparent 75%,
+        #444cf777 75%,
+        #444cf777
+      );
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
   }
 </style>
-
-<!--
 
 <script lang="js">
   const titleContainer = document.getElementById("titles");
@@ -153,4 +203,3 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     }, 2000); // Adjust this to change how long each word stays visible
   }, 2500); // This should be the sum of the above two timeouts
 </script>
- -->
