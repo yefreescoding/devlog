@@ -14,21 +14,27 @@ const datetime = date.toISOString();
 const postDate = getFormattedDate(date);
 ---
 
-<time datetime={datetime} class="min-w-[120px] text-gray-500">{postDate}</time>
-<Element class="flex flex-col">
-  <h3 class="mb-4 text-xl font-bold">{post.data.title}</h3>
-  {
-    withDesc && (
-      <q class="line-clamp-3 block italic my-4 text-base font-medium">
-        {post.data.description}
-      </q>
-    )
-  }
+<Element class="flex flex-col ontent-between h-fit">
+  <div class="p-4">
+    <time datetime={datetime} class="min-w-[120px] text-gray-500"
+      >{postDate}</time
+    >
+    <h3 class="mb-4 text-xl font-bold" transition:name="blog-title">
+      {post.data.title}
+    </h3>
+    {
+      withDesc && (
+        <q class="line-clamp-3 block italic my-4 text-base font-medium">
+          {post.data.description}
+        </q>
+      )
+    }
+  </div>
   <a
     href={`/posts/${post.slug}/`}
-    class="self-end border border-violet-600 p-2 rounded-lg bg-violet-400 text-white"
+    class="w-full border border-violet-600 py-2 text-center font-semibold rounded-sm bg-violet-400 text-white justify-self-end"
     rel="prefetch"
   >
-    Leer</a
+    Leer entrada</a
   >
 </Element>

@@ -34,7 +34,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="">
+  <section class="border border-slate-400">
     <div class="py-4 cover-bg">
       <h1
         class="bg-bgColor flex flex-col md:flex-row gap-4 p-4 title mb-6 font-bold tracking-tight items-center justify-center"
@@ -43,31 +43,41 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
           id="titles"
           class="flex-1"></span>
       </h1>
-      <div class="h-[10dvh]"></div>
+      <div class="h-[5vh]"></div>
     </div>
     <div
-      class="grid md:grid-cols-2 bg-bgColor border border-slate-400 border-separate divide-y md:divide-y-0 md:divide-x-[1px]"
+      class="grid md:grid-cols-2 bg-bgColor border-separate divide-y md:divide-y-0 md:divide-x-[1px]"
     >
       <p class="mb-4 text-base p-4 font-medium">
-        Devlog, o blog de devs, ¿captas? Un blog sobre desarrollo de software, o
-        sea, un rinconcito en la web donde puedo liberar mis pensamientos y
-        experiencias. Sin las trampas de las plataformas de redes sociales y sus
-        algoritmos.
+        Blog para y por devs. Un blog sobre desarrollo de software, o sea, un
+        rinconcito en la web donde puedo liberar mis pensamientos y
+        experiencias.
       </p>
       <SocialList />
     </div>
   </section>
-  <section aria-label="Blog post list" class="my-24">
+  <section aria-label="Blog post list" class="my-4">
     <h2
-      class="mb-4 text-xl font-bold md:text-2xl text-center border border-slate-400 p-8"
+      class="items-end mb-2 text-xl font-bold md:text-2xl text-center border border-slate-400 py-16 px-4"
     >
-      Todo lo que aprendo, todo lo que practico, todos mis errores, todos mis
-      codigos, toda sobre programacion en este blog.
+      <strong>Todo</strong> lo que aprendo
+      <img src="/learn.svg" alt="code icon" class="inline" />
+      , <strong>Todo</strong> lo que practico
+      <img src="/gym.svg" alt="code icon" class="inline" />
+      ,
+      <strong>Todos</strong> mis errores <img
+        src="/error.svg"
+        alt="code icon"
+        class="inline"
+      />, <strong>Todo</strong> mi codigo
+      <img src="/code.svg" alt="code icon" class="inline" />, <strong
+        >Todo</strong
+      > sobre programacion en este blog.
     </h2>
     <ul class="grid gap-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col  border border-slate-400 p-6 transition-all">
+          <li class="flex flex-col  border border-slate-400 p-2 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))
@@ -170,7 +180,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 <script lang="js">
   const titleContainer = document.getElementById("titles");
 
-  // titleContainer.innerText = "test";
+  titleContainer.innerText = "Experimentar";
 
   const titles = [
     "Programar",

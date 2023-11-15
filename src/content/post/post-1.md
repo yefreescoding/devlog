@@ -1,6 +1,6 @@
 ---
 title: "¿Como centrar un div?"
-description: "Esto ya no da gracia... Pero quiero compartir mi solución"
+description: "Esto ya no da gracia, por favor dejar de publicarlo en twitter... Pero quiero compartir mi solución"
 publishDate: "15 August 2023"
 # coverImage:
 #   src: './cover-image/cover.png'
