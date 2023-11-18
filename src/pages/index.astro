@@ -234,7 +234,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   }
 
   .bg-titles {
-    background: -webkit-linear-gradient(180deg, #eee, #333);
+    background: -webkit-linear-gradient(0deg, #eee, #333 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -298,9 +298,8 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 <script lang="js">
   const titleContainer = document.getElementById("titles");
 
-  titleContainer.innerText = "Experimentar";
-
   const titles = [
+    "Experimentar",
     "Programar",
     "Crear",
     "Inventar",
@@ -310,7 +309,10 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   ];
 
   let i = 0;
-  setInterval(() => {
+
+  const WORD_DURATION_ON_SCREEN = 2000;
+
+  function changeTitle() {
     // Add the fade class to start the transition
     titleContainer.classList.add("fade");
 
@@ -319,15 +321,36 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
       // console.log(titles[i]);
       titleContainer.innerText = titles[i];
       titleContainer.classList.remove("fade");
-      i++;
-      if (i === titles.length) {
-        i = 0; // Reset the index to start from the beginning of the array
-      }
-    }, 500); // This should match the transition duration in your CSS
+      i = (i + 1) % titles.length; // Use modulo to ensure i stays within bounds
+    }, getTransitionDuration());
 
     // Remove the 'show' class after the word has been visible for some time
     setTimeout(() => {
       titleContainer.classList.remove("show");
-    }, 2000); // Adjust this to change how long each word stays visible
-  }, 2500); // This should be the sum of the above two timeouts
+    }, WORD_DURATION_ON_SCREEN); // Adjust this to change how long each word stays visible
+  }
+
+  function getTransitionDuration() {
+    const styles = window.getComputedStyle(titleContainer);
+    return parseFloat(styles.transitionDuration) * 1000;
+  }
+
+  let intervalId;
+
+  function startTitleChange() {
+    changeTitle();
+
+    intervalId = setInterval(
+      changeTitle,
+      getTransitionDuration() + WORD_DURATION_ON_SCREEN
+    ); // This should be the sum of the above two timeouts
+  }
+
+  function stopTitleChange() {
+    clearInterval(intervalId);
+  }
+
+  window.addEventListener("beforeunload", stopTitleChange);
+
+  startTitleChange();
 </script>
