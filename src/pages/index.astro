@@ -194,7 +194,6 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
           </li>
         ))
       }
-      <!-- <ViewTransitions /> -->
     </ul>
   </section>
   <section class="mt-16">
@@ -234,7 +233,11 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   }
 
   .bg-titles {
-    background: -webkit-linear-gradient(0deg, #eee, #333 90%);
+    background: -webkit-linear-gradient(
+      0deg,
+      var(--theme-text),
+      var(--theme-bg) 90%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
