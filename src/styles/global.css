@@ -51,5 +51,9 @@
   background-color: (var(--theme-bg));
 }
 
+svg {
+  /* fill: var(--theme-text); */
+}
+
 @tailwind components;
 @tailwind utilities;
