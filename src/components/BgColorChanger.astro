@@ -1,0 +1,72 @@
+<script lang="js">
+  const coverBg = document.querySelector(".cover-bg");
+
+  const colorPairs = [
+    ["#4F529D", "transparent"],
+    ["#1179A3", "transparent"],
+    // Add more color pairs as needed
+  ];
+
+  let colorIndex = 0;
+  function updateGradientColors() {
+    const currentColorPair = colorPairs[colorIndex];
+    const gradientColors = `linear-gradient(
+    30deg,
+    ${currentColorPair[0]} 12%,
+    ${currentColorPair[1]} 12.5%,
+    ${currentColorPair[1]} 87%,
+    ${currentColorPair[0]} 87.5%,
+    ${currentColorPair[0]}
+  ),
+  linear-gradient(
+    150deg,
+    ${currentColorPair[0]} 12%,
+    ${currentColorPair[1]} 12.5%,
+    ${currentColorPair[1]} 87%,
+    ${currentColorPair[0]} 87.5%,
+    ${currentColorPair[0]}
+  ),
+  linear-gradient(
+    30deg,
+    ${currentColorPair[0]} 12%,
+    ${currentColorPair[1]} 12.5%,
+    ${currentColorPair[1]} 87%,
+    ${currentColorPair[0]} 87.5%,
+    ${currentColorPair[0]}
+  ),
+  linear-gradient(
+    150deg,
+    ${currentColorPair[0]} 12%,
+    ${currentColorPair[1]} 12.5%,
+    ${currentColorPair[1]} 87%,
+    ${currentColorPair[0]} 87.5%,
+    ${currentColorPair[0]}
+  ),
+  linear-gradient(
+    60deg,
+    ${currentColorPair[0]} 25%,
+    ${currentColorPair[1]} 25.5%,
+    ${currentColorPair[1]} 75%,
+    ${currentColorPair[0]} 75%,
+    ${currentColorPair[0]}
+  ),
+  linear-gradient(
+    60deg,
+    ${currentColorPair[0]} 25%,
+    ${currentColorPair[1]} 25.5%,
+    ${currentColorPair[1]} 75%,
+    ${currentColorPair[0]} 75%,
+    ${currentColorPair[0]}
+  )`;
+
+    coverBg.style.backgroundImage = gradientColors;
+
+    colorIndex = (colorIndex + 1) % colorPairs.length;
+  }
+
+  // Call updateGradientColors initially
+  updateGradientColors();
+
+  // Update the gradient colors every 5 seconds (adjust the interval as needed)
+  setInterval(updateGradientColors, 3000);
+</script>

@@ -4,6 +4,7 @@ import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
+import BgColorChanger from "@/components/BgColorChanger";
 
 const MAX_POSTS = 10;
 const allPosts = await getCollection("post");
@@ -34,7 +35,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="border border-slate-400">
+  <section class="border border-slate-300">
     <div class="py-4 cover-bg">
       <h1
         class="bg-bgColor flex flex-col md:flex-row gap-4 title mb-6 font-bold tracking-tight items-center justify-center"
@@ -45,6 +46,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
       </h1>
       <div class="h-[5vh]"></div>
     </div>
+    <!-- <BgColorChanger /> -->
     <div
       class="grid md:grid-cols-2 bg-bgColor border-separate divide-y md:divide-y-0 md:divide-x-[1px]"
     >
@@ -58,7 +60,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   </section>
   <section aria-label="Blog post list" class="my-4">
     <h2
-      class="items-end mb-2 text-xl font-bold md:text-2xl text-center border border-slate-400 py-16 px-4"
+      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border border-slate-300 py-16 px-4"
     >
       <strong>Todo</strong> lo que aprendo
       <svg
@@ -189,7 +191,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     <ul class="grid gap-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col  border border-slate-400 p-2 transition-all">
+          <li class="flex flex-col  border border-slate-300 p-2 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))
@@ -243,58 +245,77 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   }
 
   .cover-bg {
+    --pattern-color-1: #444cf7;
+    --pattern-color-2: #444cf777;
     background-color: #e5e5f7;
     opacity: 0.8;
     background-image: linear-gradient(
         30deg,
-        #444cf7 12%,
+        var(--pattern-color-1) 12%,
         transparent 12.5%,
         transparent 87%,
-        #444cf7 87.5%,
-        #444cf7
+        var(--pattern-color-1) 87.5%,
+        var(--pattern-color-1)
       ),
       linear-gradient(
         150deg,
-        #444cf7 12%,
+        var(--pattern-color-1) 12%,
         transparent 12.5%,
         transparent 87%,
-        #444cf7 87.5%,
-        #444cf7
+        var(--pattern-color-1) 87.5%,
+        var(--pattern-color-1)
       ),
       linear-gradient(
         30deg,
-        #444cf7 12%,
+        var(--pattern-color-1) 12%,
         transparent 12.5%,
         transparent 87%,
-        #444cf7 87.5%,
-        #444cf7
+        var(--pattern-color-1) 87.5%,
+        var(--pattern-color-1)
       ),
       linear-gradient(
         150deg,
-        #444cf7 12%,
+        var(--pattern-color-1) 12%,
         transparent 12.5%,
         transparent 87%,
-        #444cf7 87.5%,
-        #444cf7
+        var(--pattern-color-1) 87.5%,
+        var(--pattern-color-1)
       ),
       linear-gradient(
         60deg,
-        #444cf777 25%,
+        var(--pattern-color-2) 25%,
         transparent 25.5%,
         transparent 75%,
-        #444cf777 75%,
-        #444cf777
+        var(--pattern-color-2) 75%,
+        var(--pattern-color-2)
       ),
       linear-gradient(
         60deg,
-        #444cf777 25%,
+        var(--pattern-color-2) 25%,
         transparent 25.5%,
         transparent 75%,
-        #444cf777 75%,
-        #444cf777
+        var(--pattern-color-2) 75%,
+        var(--pattern-color-2)
       );
     background-size: 20px 35px;
     background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    transition: all 5000ms linear;
+    animation: bg-color-rotation infinite 6000ms linear;
+  }
+
+  @keyframes bg-color-rotation {
+    0% {
+      --pattern-color-1: #9795f0;
+      --pattern-color-2: #9795f07b;
+    }
+    50% {
+      --pattern-color-1: #7028e4;
+      --pattern-color-2: #7028e472;
+    }
+    100% {
+      --pattern-color-1: #9795f0;
+      --pattern-color-2: #9795f057;
+    }
   }
 </style>
 
@@ -313,7 +334,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 
   let i = 0;
 
-  const WORD_DURATION_ON_SCREEN = 2000;
+  const WORD_DURATION_ON_SCREEN = 5000;
 
   function changeTitle() {
     // Add the fade class to start the transition
