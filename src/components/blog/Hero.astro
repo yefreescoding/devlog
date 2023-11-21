@@ -28,9 +28,10 @@ const postDate = getFormattedDate(data.publishDate, { month: "long" });
     </div>
   )
 }
-<h1 class="mb-3 text-xl font-black sm:mb-1 md:text-4xl">{data.title}</h1>
-<div class="flex items-center">
-  <time class="title text-xl font-bold" datetime={datetime}>{postDate}</time>
+<div class="flex flex-col md:flex-row items-start flex-wrap">
+  <time class="title text-base md:text-lg font-base" datetime={datetime}
+    >{postDate}</time
+  >
   {
     !!data.tags?.length && (
       <div class="mt-1 sm:mt-0 sm:inline sm:before:mx-2 sm:before:content-['|']">
@@ -54,7 +55,7 @@ const postDate = getFormattedDate(data.publishDate, { month: "long" });
         {data.tags.map((tag, i) => (
           <>
             <a
-              class="cactus-link inline-block text-lg before:content-['#']"
+              class="cactus-link inline-block text-sm md:text-lg before:content-['#']"
               aria-label={`View more blogs with the tag ${tag}`}
               href={`/tags/${tag}/`}
               data-pagefind-filter="tag"
@@ -67,5 +68,6 @@ const postDate = getFormattedDate(data.publishDate, { month: "long" });
       </div>
     )
   }
+  <h1 class="my-4 text-3xl font-bold sm:mb-1">{data.title}</h1>
 </div>
 <p class="mt-8 text-lg italic md:text-xl">{data.description}</p>
