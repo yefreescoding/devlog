@@ -10,40 +10,53 @@ const meta = {
 ---
 
 <PageLayout meta={meta}>
-  <div class="space-y-6">
+  <main class="space-y-6">
     <h1 class="title">About / Sobre mi</h1>
+    <section class="flex flex-wrap-reverse md:flex-nowrap items-start gap-2">
+      <div class="grid gap-4">
+        <p>
+          Buscando una manera de expresarme, desahogarme, seguir aprendiendo, y
+          compartir ideas. Esos son los motivos por los que he decidi crear este
+          blog. Tambien como un proyecto, tanto pesonal como profesional. desde
+          que empece a conocer mas a fondo esto del internet, paginas web,
+          JavaScript, bases de datos, etc. Siempre quise ir documentando todo lo
+          que aprendia.
+        </p>
+        <p>
+          Comforme vayan pasando ire añadiendo mas cositas a esta parte de la
+          seccion. De momento lo que interesa saber es que estoy en un proceso
+          que se que durara para toda la vida.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <Image
+          src={aboutImg}
+          alt="A cartoon cactus looking at the 'Astro.build' logo"
+          loading="lazy"
+          class={" w-[150px] md:w-[350px]  rounded-full"}
+        />
+      </div>
+    </section>
     <p>
-      Buscando una manera de criticar, desahogarme, seguir aprendiendo, y
-      compartir ideas. Esos son los motivos por los que he decidi crear este
-      blog. Tambien como un proyecto, tanto pesonal como profesional.
+      Entre los highlights de mi carrera como desarrollador destacan
+      contribuciones a proyectos Open Source y clases particulares a nuevos
+      estudiantes de programacion web.
     </p>
-    <div class="flex justify-center">
-      <Image
-        src={aboutImg}
-        alt="A cartoon cactus looking at the 'Astro.build' logo"
-        loading="lazy"
-        class={"aspect-square w-full"}
-      />
-    </div>
     <p>Sobre el creador de este blog:</p>
     <ul class="list-inside list-disc">
-      <li>Desarrollador de software.</li>
+      <li>Desarrollador de software web.</li>
       <li>Me gusta mas el front que el back. Me refiero en desarrollo 😀</li>
       <li>Actualmente viviendo en España.</li>
       <li>Mis pasiones aparte del software son el futbol y el boxeo.</li>
       <li>Algun dia me gustaria trabajar para Vercel.</li>
     </ul>
-    <p>
-      Clone or fork my
-      <a
-        class="cactus-link inline-block"
-        href="https://github.com/chrismwilliams/astro-cactus"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="github repository"
-      >
-        repo
-      </a> if you like me!
-    </p>
-  </div>
+  </main>
+  <!-- <aside>
+       <Image
+          src={aboutImg}
+          alt="A cartoon cactus looking at the 'Astro.build' logo"
+          loading="lazy"
+          class={"aspect-square w-full"}
+        />
+    </aside> -->
 </PageLayout>
