@@ -4,7 +4,7 @@ import PageLayout from "@/layouts/Base";
 import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
 import { sortMDByDate } from "@/utils";
-import BgColorChanger from "@/components/BgColorChanger";
+// import BgColorChanger from "@/components/BgColorChanger";
 
 const MAX_POSTS = 10;
 const allPosts = await getCollection("post");
@@ -245,8 +245,22 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   }
 
   .cover-bg {
-    --pattern-color-1: #444cf7;
-    --pattern-color-2: #444cf777;
+    --pattern-color-1: hsla(261, 100%, 70%, 0.9);
+    --pattern-color-2: hsla(237, 76%, 74%, 0.5);
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    /* background-size: 20px 35px; */
+    /* height: 100vh; */
+    animation: bg-color-rotation infinite 6000ms linear;
+  }
+
+  .cover-bg:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
     background-color: #e5e5f7;
     opacity: 0.8;
     background-image: linear-gradient(
@@ -300,21 +314,17 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     background-size: 20px 35px;
     background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
     transition: all 5000ms linear;
-    animation: bg-color-rotation infinite 6000ms linear;
   }
 
   @keyframes bg-color-rotation {
     0% {
-      --pattern-color-1: #9795f0;
-      --pattern-color-2: #9795f07b;
+      background-position: 0% 50%;
     }
     50% {
-      --pattern-color-1: #7028e4;
-      --pattern-color-2: #7028e472;
+      background-position: 100% 50%;
     }
     100% {
-      --pattern-color-1: #9795f0;
-      --pattern-color-2: #9795f057;
+      background-position: 0% 50%;
     }
   }
 </style>
