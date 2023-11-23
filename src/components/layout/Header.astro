@@ -8,7 +8,7 @@ const url = new URL(Astro.request.url);
 
 <header
   id="main-header"
-  class="mb-12 p-2 sticky bg-bgColor z-10 bg_th_color top-0 flex w-auto flex-wrap-reverse items-center justify-between py-4"
+  class="py-4 px-2 sticky bg-bgColor z-10 bg_th_color top-0 flex w-auto flex-wrap-reverse items-center justify-between"
   transition:persist
 >
   <div class="flex items-center">
@@ -52,12 +52,7 @@ const url = new URL(Astro.request.url);
           stroke-linecap="round"
           stroke-linejoin="round"></path></svg
       >
-      <!-- <img
-        class="aspect-square w-[2.5rem]"
-        src="/rocket-bg.gif"
-        alt="Rocket icon"
-      /> -->
-      <span class="text-xl font-bold sm:text-2xl">DEVLOG</span>
+      <span class="text-xl font-extrabold sm:text-2xl">DEVLOG</span>
     </a>
     <nav id="navigation-menu" class="" aria-label="Main menu">
       {

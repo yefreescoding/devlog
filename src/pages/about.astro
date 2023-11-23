@@ -10,8 +10,8 @@ const meta = {
 ---
 
 <PageLayout meta={meta}>
-  <main class="space-y-6">
-    <h1 class="title">About / Sobre mi</h1>
+  <main class="space-y-6 text-lg px-2">
+    <h1 class="text-2xl font-bold">About / Sobre mi</h1>
     <section class="flex flex-wrap-reverse md:flex-nowrap items-start gap-2">
       <div class="grid gap-4">
         <p>
@@ -22,33 +22,38 @@ const meta = {
           JavaScript, bases de datos, etc. Siempre quise ir documentando todo lo
           que aprendia.
         </p>
-        <p>
-          Comforme vayan pasando ire añadiendo mas cositas a esta parte de la
-          seccion. De momento lo que interesa saber es que estoy en un proceso
-          que se que durara para toda la vida.
-        </p>
       </div>
       <div class="flex justify-center">
         <Image
           src={aboutImg}
           alt="A cartoon cactus looking at the 'Astro.build' logo"
           loading="lazy"
-          class={" w-[150px] md:w-[350px]  rounded-full"}
+          class={" w-[150px] md:w-[450px]  rounded-full grayscale hover:grayscale-0"}
         />
       </div>
     </section>
+    <p>
+      Comforme vayan pasando ire añadiendo mas cositas a esta parte de la
+      seccion. De momento lo que interesa saber es que estoy en un proceso que
+      se que durara para toda la vida.
+    </p>
     <p>
       Entre los highlights de mi carrera como desarrollador destacan
       contribuciones a proyectos Open Source y clases particulares a nuevos
       estudiantes de programacion web.
     </p>
-    <p>Sobre el creador de este blog:</p>
-    <ul class="list-inside list-disc">
-      <li>Desarrollador de software web.</li>
-      <li>Me gusta mas el front que el back. Me refiero en desarrollo 😀</li>
-      <li>Actualmente viviendo en España.</li>
-      <li>Mis pasiones aparte del software son el futbol y el boxeo.</li>
-      <li>Algun dia me gustaria trabajar para Vercel.</li>
+    <h2 class="text-2xl font-bold">FAQ:</h2>
+    <ul class="list-outside list-disc text-lg pl-6">
+      <li>🇩🇴 Soy de San Juan, Republica Dominicana .</li>
+      <li>♑️ Enero 1996. Capricornio (No creo nada en la Astrologia lol).</li>
+      <li>👶🏻 Empece a estudiar programacion en 2023.</li>
+      <li>😀 Me gusta mas el front que el back.</li>
+      <li>📍 Vivo en España.</li>
+      <li>
+        👨🏻‍💻 Trabajo como Freelance y profesor particular. Abriendome camino de a
+        poco como programador profesional.
+      </li>
+      <li>💭 Sueño con trabajar para Vercel.</li>
     </ul>
   </main>
   <!-- <aside>
@@ -60,3 +65,13 @@ const meta = {
         />
     </aside> -->
 </PageLayout>
+
+<style>
+  main {
+    background-image: linear-gradient(
+      55deg,
+      var(--theme-bg) 60%,
+      var(--theme-accent-3)
+    );
+  }
+</style>

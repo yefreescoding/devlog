@@ -35,10 +35,10 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="border border-slate-300">
+  <section class="border-[0.5px] border-gray-300">
     <div class="py-4 cover-bg">
       <h1
-        class="bg-bgColor flex flex-col md:flex-row gap-4 title mb-6 font-black tracking-tight items-center justify-center"
+        class="titles bg-bgColor flex flex-col md:flex-row gap-4 mb-6 font-black tracking-tight items-center justify-center"
       >
         <span class="flex-1 text-right py-4 md:py-6">Es hora de</span><span
           id="titles"
@@ -60,7 +60,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   </section>
   <section aria-label="Blog post list" class="my-4">
     <h2
-      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border border-slate-300 py-16 px-4"
+      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border-[0.5px] border-slate-300 py-16 px-4"
     >
       <strong>Todo</strong> lo que aprendo
       <svg
@@ -191,7 +191,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     <ul class="grid gap-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col  border border-slate-300 p-2 transition-all">
+          <li class="flex flex-col  border-[0.5px] border-slate-300 p-2 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))
@@ -221,7 +221,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 </PageLayout>
 
 <style>
-  .title {
+  .titles {
     font-size: clamp(3.5rem, 3.5vw, 5rem);
   }
 
@@ -249,11 +249,18 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     --pattern-color-2: hsla(237, 76%, 74%, 0.5);
     position: relative;
     isolation: isolate;
-    background: linear-gradient(-45deg, #fe7c54, #ef2170, #0db4f1, #23d55b);
+    background: linear-gradient(
+      -45deg,
+      #fe7c54,
+      #ef2170,
+      #0db4f1,
+      #23d55b,
+      hsl(300, 76%, 72%)
+    );
     background-size: 400% 400%;
     /* background-size: 20px 35px; */
     /* height: 100vh; */
-    animation: bg-color-rotation infinite 6000ms linear;
+    animation: bg-color-rotation infinite 4000ms linear;
   }
 
   .cover-bg:after {
