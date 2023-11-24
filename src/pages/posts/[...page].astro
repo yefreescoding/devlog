@@ -43,13 +43,13 @@ const paginationProps = {
 ---
 
 <PageLayout meta={meta}>
-  <h1 class="title mb-6">Posts</h1>
+  <h1 class="title my-12">Posts</h1>
   <div class="grid gap-y-16 sm:grid-cols-[3fr_1fr] sm:gap-x-8">
     <section aria-label="Blog post list">
       <ul class="grid md:grid-cols-2 auto-rows-auto grid-rows-none gap-2">
         {
           page.data.map((p) => (
-            <li class="flex flex-col  border border-slate-300 p-2 transition-all">
+            <li class="flex flex-col  border border-gray-300 dark:border-gray-500 p-2 transition-all">
               <PostPreview post={p} as="article" withDesc />
             </li>
           ))

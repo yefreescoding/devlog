@@ -35,7 +35,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="border-[0.5px] border-gray-300">
+  <section class="border-[0.5px] border-gray-300 dark:border-gray-500">
     <div class="py-4 cover-bg">
       <h1
         class="titles bg-bgColor flex flex-col md:flex-row gap-4 mb-6 font-black tracking-tight items-center justify-center"
@@ -48,7 +48,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     </div>
     <!-- <BgColorChanger /> -->
     <div
-      class="grid md:grid-cols-2 bg-bgColor border-separate divide-y md:divide-y-0 md:divide-x-[1px]"
+      class="grid md:grid-cols-2 bg-bgColor border-separate divide-y md:divide-y-0 md:divide-x-[0.75px] md:divide-gray-500"
     >
       <p class="mb-4 text-base p-4 font-medium">
         Blog para y por devs. Un blog sobre desarrollo de software, o sea, un
@@ -60,7 +60,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
   </section>
   <section aria-label="Blog post list" class="my-4">
     <h2
-      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border-[0.5px] border-slate-300 py-16 px-4"
+      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border-[0.5px] border-gray-300 dark:border-gray-500 py-16 px-4"
     >
       <strong>Todo</strong> lo que aprendo
       <svg
@@ -191,7 +191,7 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     <ul class="grid gap-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col  border-[0.5px] border-slate-300 p-2 transition-all">
+          <li class="flex flex-col  border-[0.5px] border-gray-300 dark:border-gray-500 p-2 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))

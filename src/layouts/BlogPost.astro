@@ -39,6 +39,14 @@ const { headings } = await post.render();
 
 <BaseLayout meta={{ title, description, articleDate, ogImage: socialImage }}>
   <div class="px-4 mt-24 flex flex-wrap gap-8 gap-x-10 lg:items-start">
+    <article class="flex-grow basis-1/2 break-words" data-pagefind-body>
+      <div id="blog-hero"><BlogHero content={post} /></div>
+      <div
+        class="prose prose-lg prose-cactus mx-auto mt-12 min-w-full prose-headings:font-bold prose-headings:text-2xl prose-headings:border-b-[0.75px] prose-headings:border-gray-300 dark:prose-headings:border-gray-500 prose-headings:pb-2"
+      >
+        <slot />
+      </div>
+    </article>
     {
       !!headings.length && (
         <aside class="sticky top-20  hidden grow basis-[10em] lg:block">
@@ -62,14 +70,6 @@ const { headings } = await post.render();
         </aside>
       )
     }
-    <article class="flex-grow basis-1/2 break-words" data-pagefind-body>
-      <div id="blog-hero"><BlogHero content={post} /></div>
-      <div
-        class="prose prose-base prose-cactus mx-auto mt-12 min-w-full prose-headings:font-semibold prose-headings:text-xl prose-headings:border-b prose-headings:border-gray-300 prose-headings:pb-2"
-      >
-        <slot />
-      </div>
-    </article>
   </div>
   <button
     id="to-top-btn"
