@@ -29,8 +29,9 @@ const postDate = getFormattedDate(data.publishDate, { month: "long" });
   )
 }
 <div class="flex flex-col md:flex-row items-start flex-wrap">
-  <time class="title text-base md:text-lg font-base" datetime={datetime}
-    >{postDate}</time
+  <time
+    class="title text-base md:text-lg font-base opacity-70"
+    datetime={datetime}>{postDate}</time
   >
   {
     !!data.tags?.length && (
