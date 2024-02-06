@@ -35,21 +35,19 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="my-16 border-[0.5px] border-gray-300 dark:border-gray-500">
+  <section class="mt-16 border-[0.5px] border-gray-400 dark:border-gray-500">
     <div class="py-4 cover-bg">
       <h1
-        class="titles flex flex-col md:flex-row gap-4 mb-6 font-black tracking-tight items-center justify-center"
+        class="titles flex flex-col md:flex-row gap-4 mb-6 font-bold tracking-tight items-center justify-center"
       >
         <span class="flex-1 text-right py-4 md:py-6">Es hora de</span><span
           id="titles"
           class="titles bg-titles flex-1 py-4 md:py-6"></span>
       </h1>
       <!-- <div class="h-[5vh]"></div> -->
-      <div
-        class="grid border-separate divide-y md:divide-y-0 md:divide-x-[0.75px] md:divide-gray-500"
-      >
+      <div class="">
         <p
-          class="mb-4 p-4 md:text-2xl text-textColor text-center font-semibold"
+          class="mb-4 p-4 text-lg md:text-2xl text-textColor text-center font-semibold"
         >
           Blog para y por devs. Un blog sobre desarrollo de software, o sea, un
           rinconcito en la web donde puedo liberar mis pensamientos y
@@ -60,9 +58,9 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     </div>
     <!-- <BgColorChanger /> -->
   </section>
-  <section aria-label="Blog post list" class="my-4">
+  <section aria-label="Blog post list" class="mb-16">
     <h2
-      class="text-gray-700 dark:text-gray-200 items-end mb-2 text-xl font-bold md:text-2xl text-center border-[0.5px] border-gray-300 dark:border-gray-500 py-16 px-4"
+      class="text-gray-700 dark:text-gray-200 items-end mb-16 text-xl font-bold md:text-3xl text-center border-[0.5px] border-gray-400 dark:border-gray-500 py-16 px-4"
     >
       <strong>Todo</strong> lo que aprendo
       <svg
@@ -190,17 +188,22 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
           stroke-linejoin="round"></path></svg
       >, <strong>Todo</strong> sobre programacion en este blog.
     </h2>
-    <ul class="grid gap-2 md:grid-cols-2">
+    <h2
+      class="text-gray-700 dark:text-gray-200 text-xl font-bold md:text-4xl border-[0.5px] mb-12"
+    >
+      Latest
+    </h2>
+    <ul class="grid gap-x-12 gap-y-2 md:grid-cols-2">
       {
         allPostsByDate.map((p) => (
-          <li class="flex flex-col  border-[0.5px] border-gray-300 dark:border-gray-500 p-2 transition-all">
+          <li class="flex flex-col  border-[0.5px] border-gray-400 dark:border-gray-500 p-2 transition-all">
             <PostPreview post={p} withDesc />
           </li>
         ))
       }
     </ul>
   </section>
-  <section class="mt-16">
+  <section class="mt-0">
     <h2 class="mb-4 text-xl font-extrabold md:text-2xl">Tecnologías:</h2>
     <ul class="space-y-4 sm:space-y-2">
       {
