@@ -35,28 +35,30 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-  <section class="border-[0.5px] border-gray-300 dark:border-gray-500">
+  <section class="my-16 border-[0.5px] border-gray-300 dark:border-gray-500">
     <div class="py-4 cover-bg">
       <h1
-        class="titles bg-bgColor flex flex-col md:flex-row gap-4 mb-6 font-black tracking-tight items-center justify-center"
+        class="titles flex flex-col md:flex-row gap-4 mb-6 font-black tracking-tight items-center justify-center"
       >
         <span class="flex-1 text-right py-4 md:py-6">Es hora de</span><span
           id="titles"
           class="titles bg-titles flex-1 py-4 md:py-6"></span>
       </h1>
-      <div class="h-[5vh]"></div>
+      <!-- <div class="h-[5vh]"></div> -->
+      <div
+        class="grid border-separate divide-y md:divide-y-0 md:divide-x-[0.75px] md:divide-gray-500"
+      >
+        <p
+          class="mb-4 p-4 md:text-2xl text-textColor text-center font-semibold"
+        >
+          Blog para y por devs. Un blog sobre desarrollo de software, o sea, un
+          rinconcito en la web donde puedo liberar mis pensamientos y
+          experiencias.
+        </p>
+        <SocialList />
+      </div>
     </div>
     <!-- <BgColorChanger /> -->
-    <div
-      class="grid md:grid-cols-2 bg-bgColor border-separate divide-y md:divide-y-0 md:divide-x-[0.75px] md:divide-gray-500"
-    >
-      <p class="mb-4 text-base p-4 font-medium">
-        Blog para y por devs. Un blog sobre desarrollo de software, o sea, un
-        rinconcito en la web donde puedo liberar mis pensamientos y
-        experiencias.
-      </p>
-      <SocialList />
-    </div>
   </section>
   <section aria-label="Blog post list" class="my-4">
     <h2
@@ -259,12 +261,12 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     );
     background-size: 400% 400%;
     /* background-size: 20px 35px; */
-    /* height: 100vh; */
+    height: 50dvh;
     animation: bg-color-rotation infinite 4000ms linear;
   }
 
   .cover-bg:after {
-    z-index: -1;
+    z-index: -2;
     content: "";
     position: absolute;
     inset: 0;
@@ -321,6 +323,20 @@ const cactusTech: Array<{ title: string; desc: string; href: string }> = [
     background-size: 20px 35px;
     background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
     transition: all 5000ms linear;
+  }
+
+  .cover-bg:before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(215, 215, 221);
+    background: linear-gradient(
+      0deg,
+      hsla(240, 8%, 85%, 0) 0%,
+      var(--theme-bg) 53%,
+      var(--theme-bg)
+    );
   }
 
   @keyframes bg-color-rotation {
